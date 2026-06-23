@@ -1,0 +1,25 @@
+/*
+    地址会被自动转换为搜索public文件夹下的字体
+    该错误可忽略
+*/
+
+@font-face {
+    font-family: 'text-font1';
+    src: url('/assets/fonts/NotoSansSC-VariableFont_wght.ttf') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'text-font2';
+    src: url('/assets/fonts/SourceHanSansSC-Regular-2.otf') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'code-font1';
+    src: url('/assets/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}

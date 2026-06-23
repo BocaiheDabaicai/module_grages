@@ -1,0 +1,16 @@
+:root {
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
+    --vp-font-family-base: 'text-font1'; /* 普通文本字体 */
+    --vp-font-family-mono: 'code-font1'; /* 代码字体 */
+}
+
+/* 清除可能来自主题的表格默认样式 */
+.el-table table {
+    margin: 0 !important;
+}
+
+/* 表格样式修复 */
+.vp-doc .el-table th{
+    border-bottom: none !important;
+}
