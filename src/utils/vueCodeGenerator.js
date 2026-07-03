@@ -245,13 +245,14 @@ export const generateWholeCode = function (elementStructure) {
 
     let props = {...elementStructure.props}
     let events = {...elementStructure.event}
-    let style = props.style
-    delete props.style
-
-    let styleKeys = Object.keys(style)
-    // console.log(style)
-    let styleResult = styleKeys.map(item => `${item}:${style[item]}`).join(';')
-    let constructStyle = `style="${styleResult};"`
+    let constructStyle = ''
+    if (props.style) {
+      let style = props.style
+      delete props.style
+      let styleKeys = Object.keys(style)
+      let styleResult = styleKeys.map(item => `${item}:${style[item]}`).join(';')
+      constructStyle = `style="${styleResult};"`
+    }
 
     let propsKeys = Object.keys(props)
     // console.log(props)
@@ -332,22 +333,16 @@ const generateChildWholeCode = (slots) => {
 }
 
 const generateChildWholeCodeScript = function (slots){
-    // console.log(slots)
-    if (slots.length <= 0)
+    if (!slots || typeof slots === 'string' || (Array.isArray(slots) && slots.length === 0))
         return null;
     else {
         let slotsArray = slots.map(slot => {
-            if(typeof slot === 'string' || slot.event === undefined) return ;
+            if(typeof slot === 'string' || !slot.event || Object.keys(slot.event).length === 0) return ;
             else {
                 let eventsArray = Object.keys(slot.event)
-                if (eventsArray.length === 0) {
-                    return undefined;
-                } else {
-                    return eventsArray.map(item => `${slot.event[item]} `).join('\n')
-                }
+                return eventsArray.map(item => `${slot.event[item]} `).join('\n')
             }
         }).filter(Boolean)
-        // console.log(slotsArray.join('\n'))
         return slotsArray.join('\n');
     }
 

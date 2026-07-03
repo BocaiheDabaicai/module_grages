@@ -5,7 +5,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "南方前端库",
+  title: "xhsndl 前端库",
   description: "基于VitePress",
   // head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   themeConfig: {
@@ -112,11 +112,11 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/BocaiheDabaicai/module_grages' }
     ],
     footer: {
-      message: '版权归属于 南方乳业股份有限公司 所有',
-      copyright: 'Copyright © 2025-至今 南方乳业数字信息部'
+      message: '邮箱：54572905@qq.com | 仓库：https://github.com/BocaiheDabaicai/module_grages',
+      copyright: '"The only way to do great work is to love what you do." — Steve Jobs'
     },
     lastUpdated: {
       text: '最后更新于',

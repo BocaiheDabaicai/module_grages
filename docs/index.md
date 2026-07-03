@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "南方模板库及功能库"
+  name: "xhsndl 模板库及功能库"
   text: "基于VitePress"
   tagline: 助力System,function快速实现
   image:
@@ -18,7 +18,7 @@ hero:
       link: /function/normal/apiTemplate
     - theme: alt
       text: 代码仓库
-      link: http://10.10.1.150:19500/users/sign_in
+      link: https://github.com/xhsndl
 
 features:
   - icon:
